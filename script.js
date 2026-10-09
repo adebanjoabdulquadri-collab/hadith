@@ -101,7 +101,8 @@ console.log(author);
 const hadithChanger = () => {
   const randomHadith = Math.floor(Math.random() * quotes.length);
   console.log(randomHadith);
-  const recentHadith = (content.innerHTML = quotes[randomHadith].quote);
+  const recentHadith = (content.innerHTML =
+    `${randomHadith}.   ` + quotes[randomHadith].quote);
   const recentAuthor = (author.innerHTML = quotes[randomHadith].author);
 };
 newHadith.addEventListener("click", hadithChanger);
